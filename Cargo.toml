@@ -1,6 +1,6 @@
 [package]
 name = "microbit-bsp"
-version = "0.3.1"
+version = "0.4.0"
 edition = "2021"
 description = "An embassy-based boards support package (BSP) for BBC Micro:bit v2"
 license = "MIT OR Apache-2.0"
@@ -20,7 +20,8 @@ lsm303agr = "0.3"
 futures = { version = "0.3", default-features = false }
 defmt = { version = "0.3", optional = true }
 heapless = "0.8.0"
+nb = "1.1.0"
 
 [features]
 default = ["defmt"]
-defmt = ["dep:defmt", "embassy-nrf/defmt", "heapless/defmt-03"]
+defmt = ["dep:defmt", "embassy-nrf/defmt", "heapless/defmt-03", "nb/defmt-0-3"]
